@@ -7,6 +7,17 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+    /* 1rem = 10px*/
+    font-size: 62%;
+    --main-color: #6D67D0;
+    --primary-text: #FFFFFF;
+    --light-text: #C2BFF4;
+    --highlighted-text: #87EBCD;
+    --sencondary-text: #E7E6FB;
+    --sencondary-text-light: #DAD8F7;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -19,16 +30,7 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-:root {
-    /* 1rem = 10px*/
-    font-size: 62%;
-    --main-color: #6D67D0;
-    --primary-text: #FFFFFF;
-    --light-text: #C2BFF4;
-    --highlighted-text: #87EBCD;
-    --sencondary-text: #E7E6FB;
-    --sencondary-text-light: #DAD8F7;
-}
+
 
 #content {
     width: 100.9rem;
@@ -164,43 +166,43 @@ body {
     color: var(--light-text);
 }
 
-.cityTemperature .footer {
+.cityTemperature footer {
     width: 100%;
     display: flex;
     gap: 1rem;
 }
 
-.cityTemperature .footer div {
+/* class - wind - humidity - rain*/
+.cityTemperature footer .footer {
     background: rgba(101, 96, 200, 0.3);
-    padding: 1.3rem;
+    border-radius: .6rem;
     width: 100%;
+
+    padding: 1.3rem;
+
     display: flex;
     align-items: center;
-    border-radius: .6rem;
+    gap: 1rem;
+    
 }
 
-/* class - wind - humidity - rain*/
-.cityTemperature .footer div div {
+.cityTemperature footer .footer div {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 0;
-    margin-left: 1rem;
-    background-color: transparent;
 }
 
-.cityTemperature .footer div div span {
+.cityTemperature footer .footer span {
     color: var(--sencondary-text);
     font-size: 1.2rem;
     font-weight: 400;
 }
 
-.cityTemperature .footer div div strong {
+.cityTemperature footer .footer strong {
     color: var(--sencondary-text);
     font-size: 1.8rem;
 }
 
-.cityTemperature .footer div div strong small {
+.cityTemperature footer .footer strong small {
     color: var(--sencondary-text-light);
     font-size: 1.4rem;
     margin-left: .5rem;
@@ -326,7 +328,7 @@ body {
     padding: 4rem;
 }
 
-.dayOfTheWeek>div {
+.dayOfTheWeek .days {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -334,33 +336,36 @@ body {
     justify-content: space-between;
 }
 
-.dayOfTheWeek header {
+.dayOfTheWeek .days header {
     color: var(--sencondary-text-light);
     font-weight: bold;
     font-size: 1.4rem;
 }
 
-.dayOfTheWeek img.main {
+.dayOfTheWeek .days img.main {
     width: 5rem;
     max-height: 3rem;
 }
 
-.dayOfTheWeek footer {
+.dayOfTheWeek .days footer {
     font-size: 1.6rem;
 }
 
-.dayOfTheWeek footer .maxTemp {
+.dayOfTheWeek .days footer .maxTemp {
     font-weight: bold;
     color: var(--primary-text);
 }
 
-.dayOfTheWeek footer .minTemp {
+.dayOfTheWeek .days footer .minTemp {
     font-weight: 400;
     color: var(--light-text);
 }
 
 
 
+
+
+/* mobile */
 @media only screen and (orientation: portrait) {
     body {
         background-image: none;
@@ -384,24 +389,25 @@ body {
         line-height: 5rem;
     }
 
-    .cityTemperature .footer {
+    .cityTemperature footer {
         margin-top: 2rem;
-        width: 100%;
+        width: 90%;
         flex-direction: column;
     }
 
-    .cityTemperature .footer div {
-        display: flex;
+    .cityTemperature footer .footer {
+        align-items: center;
         justify-content: center;
     }
 
-    .cityTemperature .footer div div {
+    .cityTemperature footer .footer div {
         flex-direction: row;
+        align-items: center;
         gap: 1rem;
     }
 
-    .cityTemperature .footer div div span,
-    .cityTemperature .footer div div strong {
+    .cityTemperature footer .footer div span,
+    .cityTemperature footer .footer div strong {
         font-size: 3rem;
         align-items: flex-start;
         width: 100%;
@@ -431,25 +437,26 @@ body {
     .sunTime .chart .timeLine {
         font-size: 2rem;
     }
-}
 
-.dayOfTheWeek {
-    flex-direction: column;
-    gap: 3rem;
-    padding: 1rem;
-}
 
-.dayOfTheWeek .days {
-    background: rgba(101, 96, 200, 0.7);
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-    border-radius: .6rem;
-    gap: 2rem;
-}
+    .dayOfTheWeek {
+        flex-direction: column;
+        gap: 3rem;
+        padding: 1rem;
+    }
 
-.dayOfTheWeek header,
-.dayOfTheWeek footer {
-    font-size: 2.6rem;
-}
+    .dayOfTheWeek .days {
+        background: rgba(101, 96, 200, 0.7);
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        border-radius: .6rem;
+        gap: 2rem;
+    }
+
+    .dayOfTheWeek .days header,
+    .dayOfTheWeek .days footer {
+        font-size: 2.6rem;
+    }
+
 }
