@@ -21,7 +21,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-image: url("/src/assets/background-image.svg");
+    background-image: url("./src/assets/background-image.svg");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -98,6 +98,7 @@ body {
 #content .main .cityTemperature {
     grid-area: cityTemp;
     border-radius: 1rem;
+    background-color: var(--main-color);
 }
 
 #content .main .airQuality {
@@ -111,8 +112,6 @@ body {
     background-color: var(--main-color);
     border-radius: 1rem;
 }
-
-
 
 
 #content .main .weekWeatherForecast {
