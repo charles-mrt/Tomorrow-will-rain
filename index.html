@@ -11,13 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
+
     <link rel="stylesheet" href="src/style/style.css">
 
     <title>Tomorrow will rain?</title>
 </head>
 
 <body>
+
     <div id="content">
+
+        <header id="insertCity">
+            <input class="cityName" type="text" placeholder="adicone sua cidade">
+            <button type="submit">pesquisar<i class="ph ph-map-pin"></i></button>
+        </header>
 
         <div class="main">
 
@@ -25,13 +32,12 @@
                 <img class="weatherNow" src="./src/assets/clouds.svg" alt="nuvens">
 
                 <header>
-                    <i class="ph ph-map-pin"></i>
-                    <strong>Rio do sul, SC</strong>
+                    <span class="city"></span>
                 </header>
 
                 <div class="temp">
                     <strong class="actualTemp">
-                        <span>18</span>
+                        <span class="temp">18</span>
                         <span>°C</span>
                     </strong>
 
@@ -59,9 +65,9 @@
                     </div>
 
                     <div class="rain footer">
-                        <img src="./src/assets/rain.svg" alt="chuva">
+                        <img src="./src/assets/rain.svg" class="iconWeather" alt="">
                         <div>
-                            <span>Chuva</span>
+                            <span></span>
                             <strong>10<small>%</small></strong>
                         </div>
                     </div>
@@ -97,62 +103,26 @@
                     <strong>Horário do sol</strong>
                 </header>
 
-                <div class="chart">
-                    <img src="./src/assets/chart.svg">
-                    <strong class="actualtime">16:01</strong>
+                <div class="chartComponent">
+
+                    <div class="chart">
+                        <img src="./src/assets/chart.svg">
+                        <div class="main">
+                            <div class="gradient"></div>
+                            <strong class="actualtime"></strong>
+                        </div>
+                        <div class="sun"><span></span></div>
+                    </div>
+
+
                     <div class="timeLine">
-                        <span class="initial">06:12</span>
-                        <span class="end">18:52</span>
+                        <span class="sunrise"></span>
+                        <span class="sunset"></span>
                     </div>
                 </div>
             </div>
 
-            <div class="dayOfTheWeek">
-                <div class="days">
-                    <header>Quinta-Feira</header>
-                    <img class="main" src="./src/assets/small-clouds.svg" alt="nuvens">
-                    <footer>
-                        <span class="maxTemp">21º</span>
-                        <span class="minTemp">20º</span>
-                    </footer>
-                </div>
-
-                <div class="days">
-                    <header>Sexta-Feira</header>
-                    <img class="main" src="./src/assets/sun.svg" alt="sol">
-                    <footer>
-                        <span class="maxTemp">21º</span>
-                        <span class="minTemp">20º</span>
-                    </footer>
-                </div>
-
-                <div class="days">
-                    <header>Sábado</header>
-                    <img class="main" src="./src/assets/cloud-rain.svg" alt="nuvem com chuva">
-                    <footer>
-                        <span class="maxTemp">21º</span>
-                        <span class="minTemp">20º</span>
-                    </footer>
-                </div>
-
-                <div class="days">
-                    <header>Domingo</header>
-                    <img class="main" src="./src/assets/cloud-ray.svg" alt="nuvem com raios">
-                    <footer>
-                        <span class="maxTemp">21º</span>
-                        <span class="minTemp">20º</span>
-                    </footer>
-                </div>
-
-                <div class="days">
-                    <header>Segunda-Feira</header>
-                    <img class="main" src="./src/assets/sun-behind-the-cloud.svg" alt="sol atráz da nuvem">
-                    <footer>
-                        <span class="maxTemp">21º</span>
-                        <span class="minTemp">20º</span>
-                    </footer>
-                </div>
-
+            <div class="weekWeatherForecast">
 
             </div>
 
@@ -160,5 +130,6 @@
 
     </div>
 </body>
+<script type="module" src="./src/scripts/main.js" defer=""></script>
 
 </html>
