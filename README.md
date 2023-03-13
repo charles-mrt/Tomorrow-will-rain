@@ -1,7 +1,7 @@
 <h1 align="center"> TOMORROW WILL RAIN?</h1>
 
 <p align="center">
-   This is a weather forecast page that provides accurate information about weather conditions in real time.
+   The "Tomorrow Will Rain" app is a weather forecasting application that allows users to get real-time updates on the weather conditions of a particular city. By providing the name of a city, the app displays the current temperature, weather condition, and a five-day forecast. The app is built using HTML, CSS, and JavaScript, and uses the OpenWeatherMap API to fetch weather data..
 </p>
 
 <p align="center">
@@ -37,7 +37,7 @@ This project was developed with the following technologies:
 
 ## 🔖 Layout
 
-To test the project you can access through  [THIS LINK]()
+To test the project you can access through  [THIS LINK](https://charles-mrt.github.io/Tomorrow-will-rain/)
 
 
 ## :memo: Licença
