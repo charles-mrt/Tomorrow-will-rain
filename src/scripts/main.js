@@ -32,22 +32,13 @@ Loads the city data, gets the temperature and erases the input value.
 const loadCityData = (event) => {
     cityNameValue = cityName.value;
     getTemperature(cityNameValue);
-
-    // erase input value;
     cityName.value = "";
     event.preventDefault();
 }
-
-/** show by input change */
-cityName.addEventListener("change", (event) => {
-    loadCityData(event);
-});
 /** show by input button submit */
 submitCityNameButton.addEventListener("click", (event) => {
     loadCityData(event);
 });
-
-
 
 
 /**
