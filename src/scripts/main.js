@@ -230,7 +230,12 @@ const handlesWithTimeOfSun = () => {
     const sun = document.querySelector(".chart .sun");
 
     const actualTime = document.querySelector(".actualtime");
-    actualTime.textContent = isHour();
+
+    const updateTime = () => {
+        actualTime.textContent = isHour();
+    }
+    setInterval(updateTime,1000);
+
 
     const hourSunrise = 6;
     const hourSunset = 18;
@@ -239,7 +244,7 @@ const handlesWithTimeOfSun = () => {
     const minuteSunset = 0;
 
     let timeNow = parseInt(isHour());
-
+    
     //prevent hour above than 18 and low than 6
     if (timeNow > hourSunset) {
         timeNow = hourSunset;
@@ -296,3 +301,6 @@ const handlesWithTimeOfSun = () => {
 }
 handlesWithTimeOfSun();
 
+
+//updates the time every 5min 
+setInterval(handlesWithTimeOfSun, 5 * 60 * 1000);
